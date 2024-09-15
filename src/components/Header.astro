@@ -1,5 +1,33 @@
 ---
+import Link from "../components/Link.astro";
 ---
+
 <div>
-Header - tilføj navigation mm.
+  <div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full">
+    <div id="navbar" class="flex flex-row justify-between">
+      <div id="logo" class="">
+        <a href="/">LOGO</a>
+      </div>
+      <nav id="desktopmenu" class="hidden lg:block">
+        <ul class="flex flex-row gap-6 text-sm">
+          <li class=""><Link href="/">Hjem/Forsiden</Link></li><!-- alternativt: lav et <a href="">Link</a>, hvis vi ikke vil bruge Link.astro komponenten -->
+          <li class=""><Link href="#">Sådan deltager du</Link></li>
+          <li class=""><Link href="#">Ressourcer</Link></li>
+          <li class=""><Link href="#">Læringscenter</Link></li>
+          <li class=""><Link href="#">Wolrd Cleanup Day</Link></li>
+          <li class=""><Link href="/registrer">KNAP/regsiden</Link></li>
+        </ul>
+      </nav>
+      <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">Menu</button>
+    </div>
+    <nav id="mobilmenu" class="flex flex-col content-center pt-4" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+      <ul>
+        <li class="text-center py-2 border-y-2"><Link href="/">Hjem/Forsiden</Link></li>
+        <li class="text-center py-2 border-b-2"><Link href="#">Sådan deltager du</Link></li>
+        <li class="text-center py-2 border-b-2"><Link href="#">Ressourcer</Link></li>
+        <li class="text-center py-2 border-b-2"><Link href="#">Læringscenter</Link></li>
+        <li class="text-center py-2 border-b-2"><Link href="/registrer">World Cleanup Day</Link></li>
+      </ul>
+    </nav>
+  </div>
 </div>
