@@ -7,61 +7,60 @@ import Button from "../components/Button.astro";
 <MainLayout title=" Titel">
   <!-- Form start-->
   <h1 class="text-5xl text-center font-bold pt-10">REGISTRER DIT BIDRAG</h1>
-  <div class="border-2 border-white">
-    <section id="registrer" class="max-w-lg mx-auto pt-24 p-4">
-      <form class="space-y-4 grid grid-cols-1 gap-6">
-        <div class="text-[#EC7221]">
-          <div class="grid pb-5">
-            <label class="" for="navn">NAVN</label>
-            <input type="text" id="navn" name="navn" placeholder="" />
-          </div>
 
-          <div class="grid pb-5">
-            <label for="adresse">EFTERNAVN</label>
-            <input type="text" id="efternavn" name="efternavn" placeholder="" />
-          </div>
-
-          <div class="grid pb-5">
-            <label for="e-mail">E-MAIL</label>
-            <input type="text" id="e-mail" name="e-mail" placeholder="" />
-          </div>
-
-          <div class="grid pb-5">
-            <label for="Land">LAND</label>
-            <input type="text" id="land" name="land" placeholder="" />
-          </div>
-
-          <div class="grid pb-5">
-            <label for="organisation">ORGANISATION</label>
-            <input type="text" id="organisation" name="organisation" placeholder="" />
-          </div>
-
-          <div class="grid pb-5">
-            <label for="deltagere">DELTAGERE</label>
-            <input type="text" id="deltagere" name="deltagere" placeholder="" />
-          </div>
-
-          <div class="grid pb-10">
-            <label for="data">MÆNGDE AF SLETTET DATA</label>
-            <input type="text" id="data" name="data" placeholder="" />
-          </div>
-
-          <div class="pb-10 text-[#F0EFE3]">
-            <input type="checkbox" id="nyhedsbrev" name="nyhedsbrev" />
-            <label for="nyhedsbrev">* Jeg er enig med Lets Do It, World Terms and Conditions</label>
-          </div>
-
-          <div class="text-[#F0EFE3]">
-            <input type="checkbox" id="nyhedsbrev" name="nyhedsbrev" />
-            <label for="nyhedsbrev">Jeg vil gerne tilmelde mig nyheder fra World Cleanup Day </label>
-          </div>
-
-          <!-- <div class="flex justify-center pt-20">
-          <Button variant="primary" size="medium">DEL DINE RESULTATER HER</Button>
-        </div> -->
+  <section id="registrer" class="max-w-2xl mx-auto pt-24 p-2">
+    <form class="space-y-4 grid grid-cols-1 gap-6 border-2 border-[#F0EFE3] py-10 px-20 rounded-md">
+      <div class="text-[#EC7221]">
+        <div class="grid pb-5">
+          <label class="pb-1.5" for="navn">NAVN</label>
+          <input class="bg-[#242C18] border-2 border-[#F0EFE3] rounded-md" type="text" id="navn" name="navn" placeholder="" />
         </div>
-      </form>
-      <!-- Form slut -->
-    </section>
-  </div>
+
+        <div class="grid pb-5">
+          <label class="pb-1.5" for="adresse">EFTERNAVN</label>
+          <input class="bg-[#242C18] border-2 border-[#F0EFE3] rounded-md" type="text" id="efternavn" name="efternavn" placeholder="" />
+        </div>
+
+        <div class="grid pb-5">
+          <label class="pb-1.5" for="e-mail">E-MAIL</label>
+          <input class="bg-[#242C18] border-2 border-[#F0EFE3] rounded-md" class="bg-[#242C18] border-2 border-[#F0EFE3]" type="text" id="e-mail" name="e-mail" placeholder="" />
+        </div>
+
+        <div class="grid pb-5">
+          <label class="pb-1.5" for="Land">LAND</label>
+          <input class="bg-[#242C18] border-2 border-[#F0EFE3] rounded-md" type="text" id="land" name="land" placeholder="" />
+        </div>
+
+        <div class="grid pb-5">
+          <label class="pb-1.5" for="organisation">ORGANISATION</label>
+          <input class="bg-[#242C18] border-2 border-[#F0EFE3] rounded-md" type="text" id="organisation" name="organisation" placeholder="" />
+        </div>
+
+        <div class="grid pb-5">
+          <label class="pb-1.5" for="deltagere">DELTAGERE</label>
+          <input class="bg-[#242C18] border-b-2 border-[#F0EFE3] rounded-md" type="number" id="deltagere" name="deltagere" placeholder="" />
+        </div>
+
+        <div class="grid pb-10">
+          <label class="pb-1.5" for="data">MÆNGDE AF SLETTET DATA</label>
+          <input class="bg-[#242C18] border-2 border-[#F0EFE3] rounded-md" type="number" id="data" name="data" placeholder="" />
+        </div>
+
+        <div class="pb-10 text-[#F0EFE3]">
+          <input type="checkbox" id="nyhedsbrev" name="nyhedsbrev" />
+          <label for="nyhedsbrev">* Jeg er enig med <span class="italic">Lets Do It, World Terms and Conditions</span></label>
+        </div>
+
+        <div class="text-[#F0EFE3]">
+          <input type="checkbox" id="nyhedsbrev" name="nyhedsbrev" />
+          <label for="nyhedsbrev">Jeg vil gerne tilmelde mig nyheder fra World Cleanup Day </label>
+        </div>
+
+        <div class="flex justify-center pt-20">
+          <Button variant="primary" size="medium">DEL DINE RESULTATER HER</Button>
+        </div>
+      </div>
+    </form>
+    <!-- Form slut -->
+  </section>
 </MainLayout>
