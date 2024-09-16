@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Header from "../components/Header.astro"
 import Button from "../components/Button.astro";
+import Card from "../components/Card.astro"
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
@@ -24,11 +25,101 @@ import thumbsup from "../assets/images/thumbsup.png";
     <div class="bg-[var(--greendark)] lg:bg-[var(--offwhite)] flex justify-center items-center"><img class="w-full h-96" src="logo_lg.svg" alt="logo" /></div>
   </section>
 
-  <section id="hvad_er">
-	<div>
-		<h2>
-			
-		</h2>
+  <section id="hvad_er" class="grid lg:grid-cols-2 bg-[var(--olivengreen)]">
+	<div class="relative">
+		
+		<div class="absolute lg:p-20 top-32 z-2">
+			<h3 class="text-[var(--greendark)] lg:text-6xl font-bold">Hvad er</h3>
+			<h2 class="text-[var(--offwhite)] lg:text-8xl font-bold">
+				DIGITAL CLEANUP DAY?
+			</h2>
+		</div>
+		<img class="lg:w-[680px] w-0 h-auto -mt-16 " src="form.svg" alt="">
+	</div>
+	<p class="text-[var(--offwhite)] lg:text-3xl font-light flex justify-center items-center pr-28">Digital Cleanup Day er en dag dedikeret til at rydde op i vores digitale liv, ligesom vi rydder op i vores fysiske miljø på World Cleanup Day. Nu på sit femte år og organiseret af Let's Do It World, har Digital Cleanup Day til formål at øge bevidstheden om digital forurening og opfodre både enkeltpersoner og virksomheder til at rydde op og omstrukturere deres online tilstedeværelse</p>
+  </section>
+
+  <section id="timer" class="bg-[var(--greendark)] text-[var(--orange)] py-48">
+	  <div id="countdown" class="flex justify-center space-x-24 text-center">
+		<div class="flex flex-col">
+		  <span id="days" class="text-[128px] font-normal"></span>
+		  <span class="text-5xl">DAGE</span>
+		</div>
+		<div class="flex flex-col">
+		  <span id="hours" class="text-[128px] font-normal"></span>
+		  <span class="text-5xl">TIMER</span>
+		</div>
+		<div class="flex flex-col">
+		  <span id="minutes" class="text-[128px] font-normal"></span>
+		  <span class="text-5xl">MINUTTER</span>
+		</div>
+		<div class="flex flex-col">
+		  <span id="seconds" class="text-[128px] font-normal"></span>
+		  <span class="text-5xl">SEKUNDER</span>
+		</div>
+	  </div>
+	  <h1 class="text-[var(--olivengreen)] flex justify-center items-center lg:text-5xl pt-28">...TIL DIGITAL CLEANUP DAY!</h1>
+  </section>
+
+  <section id="hvorfor" class="bg-[var(--olivengreen)] pt-36 pb-20">
+	<h1 class="text-[var(--greendark)] lg:text-6xl font-semibold flex justify-center items-center">HVORFOR RYDDE OP I DIGITALT ROD?</h1>
+	<div class="grid grid-cols-2 lg:grid-cols-5 mx-9 gap-4 pt-20">
+		<div class="flex justify-center items-center">
+			<Card svg="co2.svg" >
+				Hjælper med at reducere CO2- udledning
+			</Card>
+		</div>
+		<div class="flex justify-center items-center">
+			<Card svg="device.svg" >
+				Forlænger dine enheders liv
+			</Card>
+		</div>
+		<div class="flex justify-center items-center">
+			<Card svg="fast_file.svg" >
+				Fremskynder og forenkler deling og søgning af information
+			</Card>
+		</div>
+		<div class="flex justify-center items-center">
+			<Card svg="security.svg" >
+				Reducerer sikkerhedsriscici ved datalagring
+			</Card>
+		</div>
+		<div class="col-span-2 lg:col-span-1 flex justify-center items-center">
+			<Card svg="disk.svg" >
+				Øger disk- og serverkapaciteten, hvilket hjælper med at reducere omkostninger
+			</Card>
+		</div>
 	</div>
   </section>
 </MainLayout>
+
+
+
+
+<script>
+
+	// chat-gpt timer
+	// Set the target date to March 15, 2025
+const targetDate = new Date('March 15, 2025 00:00:00').getTime();
+
+// Update the countdown every second
+const countdown = setInterval(() => {
+    // Get the current date and time
+    const now = new Date().getTime();
+
+    // Find the difference between now and the target date
+    const distance = targetDate - now;
+
+    // Calculate time for days, hours, minutes, and seconds
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the corresponding HTML elements
+    document.getElementById('days').innerHTML = days;
+    document.getElementById('hours').innerHTML = hours;
+    document.getElementById('minutes').innerHTML = minutes;
+    document.getElementById('seconds').innerHTML = seconds;
+}, 1000);
+</script>
