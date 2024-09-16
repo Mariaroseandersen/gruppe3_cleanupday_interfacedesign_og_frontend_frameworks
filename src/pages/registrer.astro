@@ -3,55 +3,55 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 ---
 
-<body class="bg-[var(---greendark)] text-[var(---offwhite)]"> </body>
+<body class="bg-[var(--greendark)] text-[var(--offwhite)]"> </body>
 <MainLayout title=" Titel">
   <!-- Form start-->
   <h1 class="text-5xl text-center font-bold pt-10">REGISTRER DIT BIDRAG</h1>
 
   <section id="registrer" class="max-w-2xl mx-auto pt-24 p-2">
-    <form class="space-y-4 grid grid-cols-1 gap-6 border-2 border-[#F0EFE3] py-10 px-20 rounded-md">
-      <div class="text-[#EC7221]">
+    <form class="space-y-4 grid grid-cols-1 gap-6 border-2 border-[var(--offwhite)] py-10 px-20 rounded-md">
+      <div class="text-[var(--orange)]">
         <div class="grid pb-5">
           <label class="pb-1.5" for="navn">NAVN</label>
-          <input class="bg-[#242C18] border-2 border-[#F0EFE3] rounded-md" type="text" id="navn" name="navn" placeholder="" />
+          <input class="bg-[#242C18] border-2 border-[var(--offwhite)] rounded-md" type="text" id="navn" name="navn" placeholder="" />
         </div>
 
         <div class="grid pb-5">
           <label class="pb-1.5" for="adresse">EFTERNAVN</label>
-          <input class="bg-[#242C18] border-2 border-[#F0EFE3] rounded-md" type="text" id="efternavn" name="efternavn" placeholder="" />
+          <input class="bg-[#242C18] border-2 border-[var(--offwhite)] rounded-md" type="text" id="efternavn" name="efternavn" placeholder="" />
         </div>
 
         <div class="grid pb-5">
           <label class="pb-1.5" for="e-mail">E-MAIL</label>
-          <input class="bg-[#242C18] border-2 border-[#F0EFE3] rounded-md" class="bg-[#242C18] border-2 border-[#F0EFE3]" type="text" id="e-mail" name="e-mail" placeholder="" />
+          <input class="bg-[#242C18] border-2 border-[var(--offwhite)] rounded-md" class="bg-[#242C18] border-2 border-[var(--offwhite)]" type="text" id="e-mail" name="e-mail" placeholder="" />
         </div>
 
         <div class="grid pb-5">
           <label class="pb-1.5" for="Land">LAND</label>
-          <input class="bg-[#242C18] border-2 border-[#F0EFE3] rounded-md" type="text" id="land" name="land" placeholder="" />
+          <input class="bg-[#242C18] border-2 border-[var(--offwhite)] rounded-md" type="text" id="land" name="land" placeholder="" />
         </div>
 
         <div class="grid pb-5">
           <label class="pb-1.5" for="organisation">ORGANISATION</label>
-          <input class="bg-[#242C18] border-2 border-[#F0EFE3] rounded-md" type="text" id="organisation" name="organisation" placeholder="" />
+          <input class="bg-[#242C18] border-2 border-[var(--offwhite)] rounded-md" type="text" id="organisation" name="organisation" placeholder="" />
         </div>
 
         <div class="grid pb-5">
           <label class="pb-1.5" for="deltagere">DELTAGERE</label>
-          <input class="bg-[#242C18] border-b-2 border-[#F0EFE3] rounded-md" type="number" id="deltagere" name="deltagere" placeholder="" />
+          <input class="bg-[#242C18] border-b-2 border-[var(--offwhite)] rounded-md" type="number" id="deltagere" name="deltagere" placeholder="" />
         </div>
 
         <div class="grid pb-10">
           <label class="pb-1.5" for="data">MÆNGDE AF SLETTET DATA</label>
-          <input class="bg-[#242C18] border-2 border-[#F0EFE3] rounded-md" type="number" id="data" name="data" placeholder="" />
+          <input class="bg-[#242C18] border-2 border-[var(--offwhite)] rounded-md" type="number" id="data" name="data" placeholder="" />
         </div>
 
-        <div class="pb-10 text-[#F0EFE3]">
+        <div class="pb-10 text-[var(--offwhite)]">
           <input type="checkbox" id="nyhedsbrev" name="nyhedsbrev" />
           <label for="nyhedsbrev">* Jeg er enig med <span class="italic">Lets Do It, World Terms and Conditions</span></label>
         </div>
 
-        <div class="text-[#F0EFE3]">
+        <div class="text-[var(--offwhite)]">
           <input type="checkbox" id="nyhedsbrev" name="nyhedsbrev" />
           <label for="nyhedsbrev">Jeg vil gerne tilmelde mig nyheder fra World Cleanup Day </label>
         </div>
