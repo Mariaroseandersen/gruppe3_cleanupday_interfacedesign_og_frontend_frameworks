@@ -5,5 +5,11 @@
 @layer base {
   html {
     font-family: Helvetica, sans-serif;
+
+    --olivengreen: #8d8768;
+    --brown: #766655;
+    --offwhite: #f0efe3;
+    --greendark: #242c18;
+    --orange: #ec7221;
   }
 }
