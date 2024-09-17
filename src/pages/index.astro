@@ -9,13 +9,6 @@ import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="Titel">
-  <!-- <article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
-	 -->
 	 
   <section id="hero" class="grid lg:grid-cols-2">
     <div class="bg-[var(--greendark)] lg:p-20">
@@ -25,7 +18,7 @@ import thumbsup from "../assets/images/thumbsup.png";
     <div class="bg-[var(--greendark)] lg:bg-[var(--offwhite)] flex justify-center items-center"><img class="w-full h-96" src="logo_lg.svg" alt="logo" /></div>
   </section>
 
-  <section id="hvad_er" class="grid lg:grid-cols-2 bg-[var(--olivengreen)]">
+  <section id="hvad_er" class="grid lg:grid-cols-2 bg-[var(--olivengreen)] lg:h-[700px]">
 	<div class="relative">
 		
 		<div class="absolute lg:p-20 top-32 z-2">
@@ -39,8 +32,8 @@ import thumbsup from "../assets/images/thumbsup.png";
 	<p class="text-[var(--offwhite)] lg:text-3xl font-light flex justify-center items-center pr-28">Digital Cleanup Day er en dag dedikeret til at rydde op i vores digitale liv, ligesom vi rydder op i vores fysiske miljø på World Cleanup Day. Nu på sit femte år og organiseret af Let's Do It World, har Digital Cleanup Day til formål at øge bevidstheden om digital forurening og opfodre både enkeltpersoner og virksomheder til at rydde op og omstrukturere deres online tilstedeværelse</p>
   </section>
 
-  <section id="timer" class="bg-[var(--greendark)] text-[var(--orange)] py-48">
-	  <div id="countdown" class="flex justify-center space-x-24 text-center">
+  <section id="timer" class="bg-[var(--greendark)] text-[var(--orange)] py-32">
+	  <div id="countdown" class="flex justify-center space-x-24 text-center pt-14">
 		<div class="flex flex-col">
 		  <span id="days" class="text-[128px] font-normal"></span>
 		  <span class="text-5xl">DAGE</span>
@@ -58,11 +51,11 @@ import thumbsup from "../assets/images/thumbsup.png";
 		  <span class="text-5xl">SEKUNDER</span>
 		</div>
 	  </div>
-	  <h1 class="text-[var(--olivengreen)] flex justify-center items-center lg:text-5xl pt-28">...TIL DIGITAL CLEANUP DAY!</h1>
+	  <h1 class="text-[var(--offwhite)] flex justify-center items-center lg:text-5xl pt-28">...TIL DIGITAL CLEANUP DAY!</h1>
   </section>
 
-  <section id="hvorfor" class="bg-[var(--olivengreen)] pt-36 pb-20">
-	<h1 class="text-[var(--greendark)] lg:text-6xl font-semibold flex justify-center items-center">HVORFOR RYDDE OP I DIGITALT ROD?</h1>
+  <section id="hvorfor" class="bg-[var(--offwhite)] pt-36 pb-20">
+	<h1 class="text-[var(--olivengreen)] lg:text-6xl font-semibold flex justify-center items-center">HVORFOR RYDDE OP I DIGITALT ROD?</h1>
 	<div class="grid grid-cols-2 lg:grid-cols-5 mx-9 gap-4 pt-20">
 		<div class="flex justify-center items-center">
 			<Card svg="co2.svg" >
@@ -92,44 +85,48 @@ import thumbsup from "../assets/images/thumbsup.png";
 	</div>
   </section>
 
-  <!-- gör färdigt när figma är klar -->
 
-  <section id="hvordan" class="bg-[var(--greendark)]">
-	<h1 class="text-[var(--offwhite)]">HVORDAN LAVER MAN EN DIGITAL OPRYDNING?</h1>
-	<div class="grid grid-cols-1 lg:grid-cols-2 mx-auto mt-4 gap-8">
-		<article>
-			<h1 class="text-[var(--offwhite)]">Trin 1:</h1>
-			<h2 class="text-[var(--orange)]">Ryd op på din smartphone</h2>
-			<p class="text-[var(--offwhite)]">Slet apps, du ikke længere bruger. Gamle, unødvendige apps og spil optager plads og bruger energi, selv når de ikke er i brug. Gennemgå også dine gamle brugerkonti og slet dem. Fjern overflødige fotos og videoer for at frigøre plads.</p>
+  <section id="hvordan" class="bg-[var(--greendark)] py-10 relative">
+	<div class="absolute right-0 z-0 top-[-100px]"><img class="lg:w-[600px]" src="form_green.svg" alt=""></div>
+
+	<h1 class="text-[var(--offwhite)] lg:text-6xl font-semibold flex justify-center items-center relative z-10">HVORDAN LAVER MAN EN DIGITAL OPRYDNING?</h1>
+	<div class="grid grid-cols-1 lg:grid-cols-2 mx-auto mt-4 gap-8 lg:px-48 relative z-10" >
+		<article class="lg:pr-48">
+			<h1 class="text-[var(--offwhite)] lg:text-4xl font-semibold pt-10">Trin 1:</h1>
+			<h2 class="text-[var(--orange)] lg:text-xl font-semibold pt-8">Ryd op på din smartphone</h2>
+			<p class="text-[var(--offwhite)] text-xl pt-5">Slet apps, du ikke længere bruger. Gamle, unødvendige apps og spil optager plads og bruger energi, selv når de ikke er i brug. Gennemgå også dine gamle brugerkonti og slet dem. Fjern overflødige fotos og videoer for at frigøre plads.</p>
 		</article>
 	
-		<article>
-			<h1 class="text-[var(--offwhite)]">Trin 2:</h1>
-			<h2 class="text-[var(--orange)]">Ryd op på din computer</h2>
-			<p class="text-[var(--offwhite)]">Slet duplikatfiler, slørede fotos og unødvendige videoer. Arkivér vigtige filer. Det vil forbedre ydeevnen og frigøre lagerplads.</p>
+		<article class="lg:pl-48">
+			<h1 class="text-[var(--offwhite)] lg:text-4xl font-semibold pt-10">Trin 2:</h1>
+			<h2 class="text-[var(--orange)] lg:text-xl font-semibold pt-8">Ryd op på din computer</h2>
+			<p class="text-[var(--offwhite)] text-xl pt-5">Slet duplikatfiler, slørede fotos og unødvendige videoer. Arkivér vigtige filer. Det vil forbedre ydeevnen og frigøre lagerplads.</p>
 		</article>
 	
-		<article>
-			<h1 class="text-[var(--offwhite)]">Trin 3:</h1>
-			<h2 class="text-[var(--orange)]">Ryd op i din indbakke</h2>
-			<p class="text-[var(--offwhite)]">Arkivér gamle e-mails og afmeld nyhedsbreve, du ikke læser. Slet lange samtaler og dubletter. Vær modig - klik på slet!</p>
+		<article class="lg:pr-48">
+			<h1 class="text-[var(--offwhite)] lg:text-4xl font-semibold pt-10">Trin 3:</h1>
+			<h2 class="text-[var(--orange)] lg:text-xl font-semibold pt-8">Ryd op i din indbakke</h2>
+			<p class="text-[var(--offwhite)] text-xl pt-5">Arkivér gamle e-mails og afmeld nyhedsbreve, du ikke læser. Slet lange samtaler og dubletter. Vær modig - klik på slet!</p>
 		</article>
 	
-		<article>
-			<h1 class="text-[var(--offwhite)]">Trin 4:</h1>
-			<h2 class="text-[var(--orange)]">Skab nye vaner</h2>
-			<p class="text-[var(--offwhite)]">Brug færre mails, gem filer ét sted i skyen, og vær mere bevidst om, hvilke filer og fotos du gemmer. Reducér videostreaming-kvalitet, skær ned på sociale medier og tænk over dit forbrug online.</p>
+		<article class="lg:pl-48">
+			<h1 class="text-[var(--offwhite)] lg:text-4xl font-semibold pt-10">Trin 4:</h1>
+			<h2 class="text-[var(--orange)] lg:text-xl font-semibold pt-8">Skab nye vaner</h2>
+			<p class="text-[var(--offwhite)] text-xl pt-5">Brug færre mails, gem filer ét sted i skyen, og vær mere bevidst om, hvilke filer og fotos du gemmer. Reducér videostreaming-kvalitet, skær ned på sociale medier og tænk over dit forbrug online.</p>
 		</article>
 	</div>
   </section>
 
-  <section id="cool" class="bg-[var(--olivengreen)]">
-	<img src="co2_lg.svg" alt="">
-	<div>
-		<h2>Vær cool - bidrag ikke til global opvarmning med digitalt affald!</h2>
-		<h1>Skær ned på dit CO2-udslip ved at deltag i Digital Cleanup Day!</h1>
-		<Button variant="primary" size="small" >Deltag her</Button>
+  <section id="cool" class="bg-[var(--olivengreen)] relative">
+	<div class="grid grid-cols-3 z-12">
+		<div class="flex justify-center items-center"><img src="co2_lg.svg" alt=""></div>
+		<div class="col-span-2 px-28 py-24">
+			<h2 class="text-[var(--greendark)] text-4xl font-semibold pt-">Vær cool - bidrag ikke til global opvarmning med digitalt affald!</h2>
+			<h1 class="text-[var(--offwhite)] text-5xl font-semibold pt-12">Skær ned på dit CO2-udslip ved at deltag i Digital Cleanup Day!</h1>
+			<div class="flex justify-end"><Button variant="primary" size="small" >Deltag her</Button></div>
+		</div>
 	</div>
+	<div class="absolute right-0 z-0 bottom-[-150px]"><img class="lg:w-[600px]" src="form_olive.svg" alt=""></div>
   </section>
 
   <section id="facts" class="bg-[var(--offwhite)]">
