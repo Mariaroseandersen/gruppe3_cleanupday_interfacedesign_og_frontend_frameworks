@@ -2,18 +2,28 @@
 
 ---
 
-<section id="footer" class="grid lg:grid-cols-3 bg-[var(--olivengreen)]">
+<section id="footer" class="grid grid-cols-1 lg:grid-cols-3 bg-[var(--olivengreen)] relative">
   <div class="relative">
-    <div class="absolute text-3xl text-[var(--offwhite)] px-40 pt-16">
-      <a class="" href="/">DIGITAL <br />CLEANUP <br />DAY</a>
+    <!-- Tekst med padding der tilpasses på mobil og desktop -->
+    <div class="text-4xl text-[var(--offwhite)] px-6 pt-8 lg:px-40 lg:pt-16 z-10 relative pb-10">
+      <a href="/">DIGITAL <br />CLEANUP <br />DAY</a>
     </div>
-    <img class="lg:w-[680px] w-0 h-auto -mt-48" src="form_footer.svg" alt="" />
+    <!-- Billedet er skjult på mobil og vises kun på større skærme -->
+    <img class="hidden lg:block lg:w-[680px] w-full h-auto lg:absolute lg:bottom-0 lg:left-0 lg:mt-[-20px] z-0" src="form_footer.svg" alt="Footer background image" />
   </div>
-  <div class="pt-16 pl-28">
-    <p class="text-[var(--orange)] pb-4">LET’S DO IT WORLD NGO</p>
-    <p class="text-[var(--greendark)]">Roosikrantsi 3, TALLINN 10119, Estonia <br />Reg. code - 80562203 <br />digital@ldiw.org</p>
+
+  <!-- Kontaktinformation med reduceret padding på mobil -->
+  <div class="pt-8 pl-6 lg:pt-16 lg:pl-28">
+    <p class="text-[var(--orange)] pb-4 text-bold text-xl">LETS DO IT WORLD NGO</p>
+    <p class="text-[var(--greendark)]">
+      Roosikrantsi 3, TALLINN 10119, Estonia <br />
+      Reg. code - 80562203 <br />
+      Digital@ldiw.org
+    </p>
   </div>
-  <div class="pt-16 pl-32">
+
+  <!-- Links med reduceret padding på mobil -->
+  <div class="pt-8 pl-6 lg:pt-16 lg:pl-32">
     <ul class="underline text-[var(--greendark)] leading-loose">
       <li><a href="https://www.worldcleanupday.org/blog/">Blog</a></li>
       <li><a href="https://trello.com/b/YzROvY3M/digital-cleanup-day">Marketing materials</a></li>
@@ -22,17 +32,3 @@
     </ul>
   </div>
 </section>
-
-<!-- <style>
-  p {
-    color: var(--orange);
-  }
-</style> -->
-
-<!-- <section id="hero" class="grid lg:grid-cols-2">
-  <div class="bg-[var(--greendark)] lg:p-20">
-    <h1 class="text-[var(--offwhite)] text-8xl lg:text-9xl font-bold">DIGITAL CLEANUP DAY</h1>
-    <div class="flex justify-end"><Button variant="primary" size="small">Del Dine Resultater Her</Button></div>
-  </div>
-  <div class="bg-[var(--greendark)] lg:bg-[var(--offwhite)] flex justify-center items-center"><img class="w-full h-96" src="logo_lg.svg" alt="logo" /></div>
-</section> -->

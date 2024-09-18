@@ -1,31 +1,45 @@
 ---
 import Link from "../components/Link.astro";
+import Button from "./Button.astro";
 ---
 
 <div>
-  <div x-data="{ showmenu: false }" class="fixed lg:static w-full">
-    <div id="navbar" class="flex flex-row justify-between">
-      <div id="logo" class="text-l">
+  <div x-data="{ showmenu: false }" class="sticky top-0 w-full z-50">
+    <!-- Navbar (logo and burger button) -->
+    <div id="navbar" class="flex flex-row justify-between items-center bg-[var(--olivengreen)] z-50 relative px-4 py-2 lg:px-8 lg:py-4">
+      <!-- Logo -->
+      <div id="logo" class="text-l text-[var(--offwhite)]">
         <a href="/">DIGITAL <br />CLEANUP <br />DAY</a>
       </div>
-      <nav id="desktopmenu" class="hidden lg:block">
-        <ul class="flex flex-row gap-12 text-l pt-4">
-          <li class=""><Link href="#">OM DCD</Link></li><!-- alternativt: lav et <a href="">Link</a>, hvis vi ikke vil bruge Link.astro komponenten -->
-          <li class=""><Link href="#">HVORFOR</Link></li>
-          <li class=""><Link href="#">HVORDAN</Link></li>
-          <li class=""><Link href="#">VIDSTE DU?</Link></li>
-          <li class=""><Link href="/registrer">DELTAG</Link></li>
+
+      <!-- Desktop navigation -->
+      <nav id="desktopmenu" class="hidden lg:flex flex-row items-center gap-12 text-l pt-4 text-[var(--offwhite)]">
+        <ul class="flex flex-row items-center gap-12">
+          <li><Link href="#hvad_er">OM DCD</Link></li>
+          <li><Link href="#hvorfor">HVORFOR</Link></li>
+          <li><Link href="#hvordan">HVORDAN</Link></li>
+          <li><Link href="#facts">VIDSTE DU?</Link></li>
+          <li><Button variant="primary" size="small" class="!py-1">DELTAG</Button></li>
         </ul>
       </nav>
-      <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">Menu</button>
+
+      <!-- Burger menu button for mobile -->
+      <button id="burgermenu" class="lg:hidden flex flex-col justify-center items-center w-8 h-8 z-50" x-on:click="showmenu = !showmenu">
+        <!-- Show burger lines if menu is closed -->
+        <span :class="{ 'rotate-45 translate-y-2': showmenu }" class="block w-6 h-0.5 bg-[var(--offwhite)] mb-1 transition-all duration-300"></span>
+        <span :class="{ 'opacity-0': showmenu }" class="block w-6 h-0.5 bg-[var(--offwhite)] mb-1 transition-all duration-300"></span>
+        <span :class="{ '-rotate-45 -translate-y-2': showmenu }" class="block w-6 h-0.5 bg-[var(--offwhite)] transition-all duration-300"></span>
+      </button>
     </div>
-    <nav id="mobilmenu" class="flex flex-col content-center pt-4" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-      <ul>
-        <li class="text-center py-2 border-y-2"><Link href="/">OM DCD</Link></li>
-        <li class="text-center py-2 border-b-2"><Link href="#">HVORFOR</Link></li>
-        <li class="text-center py-2 border-b-2"><Link href="#">HVORDAN</Link></li>
-        <li class="text-center py-2 border-b-2"><Link href="#">VIDSTE DU?</Link></li>
-        <li class="text-center py-2 border-b-2"><Link href="/registrer">DELTAG</Link></li>
+
+    <!-- Mobile navigation with full-screen coverage and padding -->
+    <nav id="mobilmenu" class="fixed top-0 left-0 w-full h-full bg-[var(--olivengreen)] flex flex-col justify-center items-center z-40 p-4" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+      <ul class="w-full">
+        <li class="text-center py-4 border-y-2 border-[var(--offwhite)] text-[var(--offwhite)]"><Link href="#hvad_er">OM DCD</Link></li>
+        <li class="text-center py-4 border-b-2 border-[var(--offwhite)] text-[var(--offwhite)]"><Link href="#hvorfor">HVORFOR</Link></li>
+        <li class="text-center py-4 border-b-2 border-[var(--offwhite)] text-[var(--offwhite)]"><Link href="#hvordan">HVORDAN</Link></li>
+        <li class="text-center py-4 border-b-2 border-[var(--offwhite)] text-[var(--offwhite)]"><Link href="#facts">VIDSTE DU?</Link></li>
+        <li class="text-center py-4 text-[var(--offwhite)]"><Button variant="primary" size="small">DELTAG</Button></li>
       </ul>
     </nav>
   </div>
