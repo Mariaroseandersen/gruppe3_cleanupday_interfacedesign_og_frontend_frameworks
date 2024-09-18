@@ -11,12 +11,17 @@ import thumbsup from "../assets/images/thumbsup.png";
 <MainLayout title="Titel">
 	 
   <section id="hero" class="grid lg:grid-cols-2">
-    <div class="bg-[var(--greendark)] lg:p-20">
-      <h1 class="text-[var(--offwhite)] text-8xl lg:text-9xl font-bold">DIGITAL CLEANUP DAY</h1>
-      <div class="flex justify-end"><Button variant="primary" size="small">Del Dine Resultater Her</Button></div>
+    <div class="bg-[var(--greendark)] px-24 pt-20 pb-48 lg:p-20">
+      <h1 class="text-[var(--offwhite)] text-8xl lg:text-9xl font-bold pb-10">DIGITAL CLEANUP DAY</h1>
+	  <p class="text-[var(--orange)] pb-10 text-xl">RYD OP I DIT DIGITALE ROD!</p>
+      <!-- <div class="flex justify-end"><Button variant="primary" size="small">Del Dine Resultater Her</Button></div> -->
     </div>
-    <div class="bg-[var(--greendark)] lg:bg-[var(--offwhite)] flex justify-center items-center"><img class="w-full h-96" src="logo_lg.svg" alt="logo" /></div>
+    <div class="bg-[var(--greendark)] lg:bg-[var(--offwhite)] flex justify-center items-center">
+		<img class="w-full h-96 lg:hidden" src="logo_sm.svg" alt="logo" />
+		<img class="w-full h-96 hidden lg:block" src="logo_lg.svg" alt="logo" />
+	</div>
   </section>
+
 
   <section id="hvad_er" class="grid lg:grid-cols-2 bg-[var(--olivengreen)] lg:h-[700px]">
 	<div class="relative">
@@ -29,7 +34,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 		</div>
 		<img class="lg:w-[680px] w-0 h-auto -mt-16 " src="form.svg" alt="">
 	</div>
-	<p class="text-[var(--offwhite)] lg:text-3xl font-light flex justify-center items-center pr-28">Digital Cleanup Day er en dag dedikeret til at rydde op i vores digitale liv, ligesom vi rydder op i vores fysiske miljø på World Cleanup Day. Nu på sit femte år og organiseret af Let's Do It World, har Digital Cleanup Day til formål at øge bevidstheden om digital forurening og opfodre både enkeltpersoner og virksomheder til at rydde op og omstrukturere deres online tilstedeværelse</p>
+	<p class="text-[var(--offwhite)] text-base lg:text-3xl font-light flex justify-center items-center pr-28">Digital Cleanup Day er en dag dedikeret til at rydde op i vores digitale liv, ligesom vi rydder op i vores fysiske miljø på World Cleanup Day. Nu på sit femte år og organiseret af Let's Do It World, har Digital Cleanup Day til formål at øge bevidstheden om digital forurening og opfodre både enkeltpersoner og virksomheder til at rydde op og omstrukturere deres online tilstedeværelse</p>
   </section>
 
   <section id="timer" class="bg-[var(--greendark)] text-[var(--orange)] py-32">
@@ -55,7 +60,7 @@ import thumbsup from "../assets/images/thumbsup.png";
   </section>
 
   <section id="hvorfor" class="bg-[var(--offwhite)] pt-36 pb-20">
-	<h1 class="text-[var(--olivengreen)] lg:text-6xl font-semibold flex justify-center items-center">HVORFOR RYDDE OP I DIGITALT ROD?</h1>
+	<h1 class="text-[var(--olivengreen)] text-2xl lg:text-6xl font-semibold flex justify-center items-center">HVORFOR RYDDE OP I DIGITALT ROD?</h1>
 	<div class="grid grid-cols-2 lg:grid-cols-5 mx-9 gap-4 pt-20">
 		<div class="flex justify-center items-center">
 			<Card variant="primary" svg="co2.svg" >
@@ -87,33 +92,41 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 
   <section id="hvordan" class="bg-[var(--greendark)] py-10 relative">
-	<div class="absolute right-0 z-0 top-[-100px]"><img class="lg:w-[600px]" src="form_green.svg" alt=""></div>
-
-	<h1 class="text-[var(--offwhite)] lg:text-6xl font-semibold flex justify-center items-center relative z-10">HVORDAN LAVER MAN EN DIGITAL OPRYDNING?</h1>
-	<div class="grid grid-cols-1 lg:grid-cols-2 mx-auto mt-4 gap-8 lg:px-48 relative z-10" >
-		<article class="lg:pr-48">
-			<h1 class="text-[var(--offwhite)] lg:text-4xl font-semibold pt-10">Trin 1:</h1>
-			<h2 class="text-[var(--orange)] lg:text-xl font-semibold pt-8">Ryd op på din smartphone</h2>
-			<p class="text-[var(--offwhite)] text-xl pt-5">Slet apps, du ikke længere bruger. Gamle, unødvendige apps og spil optager plads og bruger energi, selv når de ikke er i brug. Gennemgå også dine gamle brugerkonti og slet dem. Fjern overflødige fotos og videoer for at frigøre plads.</p>
-		</article>
-	
-		<article class="lg:pl-48">
-			<h1 class="text-[var(--offwhite)] lg:text-4xl font-semibold pt-10">Trin 2:</h1>
-			<h2 class="text-[var(--orange)] lg:text-xl font-semibold pt-8">Ryd op på din computer</h2>
-			<p class="text-[var(--offwhite)] text-xl pt-5">Slet duplikatfiler, slørede fotos og unødvendige videoer. Arkivér vigtige filer. Det vil forbedre ydeevnen og frigøre lagerplads.</p>
-		</article>
-	
-		<article class="lg:pr-48">
-			<h1 class="text-[var(--offwhite)] lg:text-4xl font-semibold pt-10">Trin 3:</h1>
-			<h2 class="text-[var(--orange)] lg:text-xl font-semibold pt-8">Ryd op i din indbakke</h2>
-			<p class="text-[var(--offwhite)] text-xl pt-5">Arkivér gamle e-mails og afmeld nyhedsbreve, du ikke læser. Slet lange samtaler og dubletter. Vær modig - klik på slet!</p>
-		</article>
-	
-		<article class="lg:pl-48">
-			<h1 class="text-[var(--offwhite)] lg:text-4xl font-semibold pt-10">Trin 4:</h1>
-			<h2 class="text-[var(--orange)] lg:text-xl font-semibold pt-8">Skab nye vaner</h2>
-			<p class="text-[var(--offwhite)] text-xl pt-5">Brug færre mails, gem filer ét sted i skyen, og vær mere bevidst om, hvilke filer og fotos du gemmer. Reducér videostreaming-kvalitet, skær ned på sociale medier og tænk over dit forbrug online.</p>
-		</article>
+	<div class="absolute right-0 z-0 top-[-100px]">
+	  <img class="lg:w-[600px]" src="form_green.svg" alt="Form Image">
+	</div>
+  
+	<!-- Container to center text horizontally and vertically -->
+	<div class="flex justify-center items-center relative z-10 min-h-[200px]">
+	  <h1 class="text-[var(--offwhite)] text-2xl lg:text-6xl font-semibold text-center">
+		HVORDAN LAVER MAN EN DIGITAL OPRYDNING?
+	  </h1>
+	</div>
+  
+	<div class="grid grid-cols-1 lg:grid-cols-2 mx-auto mt-4 gap-8 lg:px-48 relative z-10">
+	  <article class="lg:pr-48">
+		<h1 class="text-[var(--offwhite)] lg:text-4xl font-semibold pt-10">Trin 1:</h1>
+		<h2 class="text-[var(--orange)] lg:text-xl font-semibold pt-8">Ryd op på din smartphone</h2>
+		<p class="text-[var(--offwhite)] text-xl pt-5">Slet apps, du ikke længere bruger. Gamle, unødvendige apps og spil optager plads og bruger energi, selv når de ikke er i brug. Gennemgå også dine gamle brugerkonti og slet dem. Fjern overflødige fotos og videoer for at frigøre plads.</p>
+	  </article>
+  
+	  <article class="lg:pl-48">
+		<h1 class="text-[var(--offwhite)] lg:text-4xl font-semibold pt-10">Trin 2:</h1>
+		<h2 class="text-[var(--orange)] lg:text-xl font-semibold pt-8">Ryd op på din computer</h2>
+		<p class="text-[var(--offwhite)] text-xl pt-5">Slet duplikatfiler, slørede fotos og unødvendige videoer. Arkivér vigtige filer. Det vil forbedre ydeevnen og frigøre lagerplads.</p>
+	  </article>
+  
+	  <article class="lg:pr-48">
+		<h1 class="text-[var(--offwhite)] lg:text-4xl font-semibold pt-10">Trin 3:</h1>
+		<h2 class="text-[var(--orange)] lg:text-xl font-semibold pt-8">Ryd op i din indbakke</h2>
+		<p class="text-[var(--offwhite)] text-xl pt-5">Arkivér gamle e-mails og afmeld nyhedsbreve, du ikke læser. Slet lange samtaler og dubletter. Vær modig - klik på slet!</p>
+	  </article>
+  
+	  <article class="lg:pl-48">
+		<h1 class="text-[var(--offwhite)] lg:text-4xl font-semibold pt-10">Trin 4:</h1>
+		<h2 class="text-[var(--orange)] lg:text-xl font-semibold pt-8">Skab nye vaner</h2>
+		<p class="text-[var(--offwhite)] text-xl pt-5">Brug færre mails, gem filer ét sted i skyen, og vær mere bevidst om, hvilke filer og fotos du gemmer. Reducér videostreaming-kvalitet, skær ned på sociale medier og tænk over dit forbrug online.</p>
+	  </article>
 	</div>
   </section>
 
