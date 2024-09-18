@@ -58,27 +58,27 @@ import thumbsup from "../assets/images/thumbsup.png";
 	<h1 class="text-[var(--olivengreen)] lg:text-6xl font-semibold flex justify-center items-center">HVORFOR RYDDE OP I DIGITALT ROD?</h1>
 	<div class="grid grid-cols-2 lg:grid-cols-5 mx-9 gap-4 pt-20">
 		<div class="flex justify-center items-center">
-			<Card svg="co2.svg" >
+			<Card variant="primary" svg="co2.svg" >
 				Hjælper med at reducere CO2- udledning
 			</Card>
 		</div>
 		<div class="flex justify-center items-center">
-			<Card svg="device.svg" >
+			<Card variant="primary" svg="device.svg" >
 				Forlænger dine enheders liv
 			</Card>
 		</div>
 		<div class="flex justify-center items-center">
-			<Card svg="fast_file.svg" >
+			<Card variant="primary" svg="fast_file.svg" >
 				Fremskynder og forenkler deling og søgning af information
 			</Card>
 		</div>
 		<div class="flex justify-center items-center">
-			<Card svg="security.svg" >
+			<Card variant="primary" svg="security.svg" >
 				Reducerer sikkerhedsriscici ved datalagring
 			</Card>
 		</div>
 		<div class="col-span-2 lg:col-span-1 flex justify-center items-center">
-			<Card svg="disk.svg" >
+			<Card variant="primary" svg="disk.svg" >
 				Øger disk- og serverkapaciteten, hvilket hjælper med at reducere omkostninger
 			</Card>
 		</div>
@@ -118,65 +118,95 @@ import thumbsup from "../assets/images/thumbsup.png";
   </section>
 
   <section id="cool" class="bg-[var(--olivengreen)] relative">
-	<div class="absolute right-0 z-0 bottom-[-150px]"><img class="lg:w-[600px]" src="form_olive.svg" alt=""></div>
+	<div class="absolute right-0 z-0 bottom-[-150px]"><img class="lg:w-[800px]" src="form_olive.svg" alt=""></div>
 	<div class="grid grid-cols-3 relative z-12">
-		<div class="flex justify-center items-center"><img src="co2_lg.svg" alt=""></div>
-		<div class="col-span-2 px-28 py-24">
-			<h2 class="text-[var(--greendark)] text-4xl font-semibold pt-">Vær cool - bidrag ikke til global opvarmning med digitalt affald!</h2>
-			<h1 class="text-[var(--offwhite)] text-5xl font-semibold pt-12">Skær ned på dit CO2-udslip ved at deltag i Digital Cleanup Day!</h1>
+		<div class="flex justify-center items-center vl"><img src="co2_lg.svg" alt=""></div>
+		<div class="col-span-2 px-32 py-24">
+			<h2 class="text-[var(--greendark)] lg:text-5xl font-semibold prose">Vær cool - bidrag ikke til global opvarmning med digitalt affald!</h2>
+			<h1 class="text-[var(--offwhite)] lg:text-6xl font-semibold pt-12 prose">Skær ned på dit CO2-udslip ved at deltag i Digital Cleanup Day!</h1>
 			<div class="flex justify-end"><Button variant="primary" size="small" >Deltag her</Button></div>
 		</div>
 	</div>
 	
   </section>
 
-  <section id="facts" class="bg-[var(--offwhite)]">
-	<div>
-		<h1>VIDSTE DU?</h1>
-		<h2>FAKTA OM DIGITAL AFFALD</h2>
-		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
+  <section id="facts" class="bg-[var(--offwhite)] py-24">
+	<div class="lg:px-28 pb-14">
+		<h1 class="text-[var(--olivengreen)] lg:text-6xl font-semibold prose">VIDSTE DU?</h1>
+			<h2 class="text-[var(--olivengreen)] lg:text-5xl font-semibold prose">FAKTA OM DIGITAL AFFALD</h2>
 	</div>
-	<img src="ewaste.svg" alt="">
-  </section>
-
-  <section id="deltag" class="bg-[var(--olivengreen)]">
-	<h1>SÅDAN DELTAGER DU</h1>
-	<div>
-		<article>
-			<img src="people.svg" alt="">
-			<Button variant="primary" size="small">ORGANISATION</Button>
-		</article>
-		<article>
-			<img src="person.svg" alt="">
-			<Button variant="primary" size="small">INDIVIDUELT</Button>
-		</article>
+	<div class="grid lg:grid-cols-3 lg:px-28">
+		<div class="col-span-2">
+			<ul class="list-disc list-outside space-y-6">
+				<li class="text-[var(--greendark)] prose text-2xl font-light">I 2022 blev omkring 70 millioner servere brugte til at opbevare data. Hver enkelt server forårsagade produktionen af 1-2 tons CO2. I det år blev omkring 20 millioner af dem til elektronisk affald. (a)</li>
+				<li class="text-[var(--greendark)] prose text-2xl font-light">99% af alle data er skabt inden for de sidste 10 år.</li>
+				<li class="text-[var(--greendark)] prose text-2xl font-light">Den ubegrænsede databrug i dag kræver 3 gange mere energi, end alle de solpaneler, verden kan producere!</li>
+				<li class="text-[var(--greendark)] prose text-2xl font-light">En e-mail udleder i gennemsnit 4 g CO2 = det samme som en elpære, der er tændt i 6 minutter!</li>
+				<li class="text-[var(--greendark)] prose text-2xl font-light">Der sendes 320 milliarder e-mails hver dag, og 62 billioner spam-e-mails hver år = 20 millioner tons CO2.</li>
+			</ul>
+		</div>
+		<div class="flex justify-center items-center"><img class="lg:w-[600px]" src="ewaste.svg" alt=""></div>
 	</div>
   </section>
 
-  <section id="tal" class="bg-[var(--greendark)]">
-	<h1>DIGITAL CLEANING DAY I TIL</h1>
-	<div>
-		<Card svg="people.svg"></Card>
-		<Card svg="data.svg"></Card>
-		<Card svg="co2.svg"></Card>
+  <section id="deltag" class="bg-[var(--olivengreen)] py-20">
+	<div class="grid lg:grid-cols-3">
+	  <div class="flex justify-center items-center">
+		<h1 class="text-[var(--offwhite)] text-3xl lg:text-7xl font-bold lg:pl-20 prose vl2">SÅDAN DELTAGER DU</h1>
+	  </div>
+  
+	  <div class="flex flex-col justify-center items-center">
+		<article class="flex flex-col items-center space-y-6 lg:pl-52">
+		  <img class="lg:h-[170px]" src="people.svg" alt="">
+		  <Button variant="primary" size="small">ORGANISATION</Button>
+		</article>
+	  </div>
+  
+	  <div class="flex flex-col justify-center items-center">
+		<article class="flex flex-col items-center space-y-6">
+		  <img class="lg:h-[170px]" src="person.svg" alt="">
+		  <Button variant="primary" size="small">INDIVIDUELT</Button>
+		</article>
+	  </div>
 	</div>
-	<!-- form grön -->
-	<img src="" alt="form">
-	<p>Since 2020, 175 different countries and territories have taken part in Digital Cleanup Day.</p>
-	<p>Almost 1.2 million people have deleted over 14.5 million GB of data, preventing the yearly production of CO2.</p>
+  </section>
+
+  <section id="tal" class="bg-[var(--greendark)] relative">
+	<div class="absolute right-0 z-0 top-[-100px]"><img class="w-[600px]" src="form_green.svg" alt="form"></div>
+	<h1 class="text-[var(--offwhite)]  lg:text-6xl font-semibold flex justify-center items-center pt-20 relative z-10">DIGITAL CLEANING DAY I TIL</h1>
+	<div class="grid grid-cols-2 lg:grid-cols-3 mx-9 gap-4 pt-20 pb-20 lg:pb-80 relative z-10">
+		<div class="flex justify-center items-center relative z-10">
+			<Card variant="secondary"  svg="people.svg">1,184,747 Deltagere</Card>
+		</div>
+
+		<div class="flex justify-center items-center">
+			<Card variant="secondary" svg="data.svg">14.5 M GB data er slettet</Card>
+		</div>
+
+		<div class="flex justify-center items-center col-span-2 lg:col-span-1">
+			<Card variant="secondary" svg="co2.svg">3,625 tons CO2-produktion forhindret årligt</Card>
+		</div>
+	</div>
+	
+	</div>
+	<div class=" flex justify-center items-center px-20 lg:absolute bottom-20 right-20 lg:w-[662px]"><p class="text-[var(--offwhite)] text-2xl font-light">Siden 2020 har <span class="text-[var(--orange)]">175 forskellige lande og territorier</span> deltaget i Digital Cleanup Day. Næsten 1,2 millioner mennsker har slettet over <span class="text-[var(--orange)]">14,5 millioner GB data</span>, hvilket har forhindret produktionen af omkring <span class="text-[var(--orange)]">3.625 tons CO2</span> om året.</p>
   </section>
 
 
 </MainLayout>
 
 
+<style>
+	.vl {
+  border-right: 1px solid var(--greendark);
+  height: 600px;
+}
+
+.vl2 {
+  border-right: 1px solid var(--offwhite);
+  height: 300px;
+}
+</style>
 
 
 <script>
