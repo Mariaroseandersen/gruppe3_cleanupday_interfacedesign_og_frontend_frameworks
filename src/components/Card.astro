@@ -1,17 +1,21 @@
 ---
-// Henter parametrene fra Astro.props
-const { svg="" } = Astro.props; 
----
-<article class="flex flex-col items-center h-full  w-44">
-    
-    <img class="mb-6" src={svg} alt="">
-    <p><slot /></p>
-    
-</article>
+const { svg = "", variant = "primary", size = "medium" } = Astro.props;
 
-<style>
-    p{
-        color: var(--greendark);
-        font-size: x-large;
-    }
-</style>
+const cardBaseStyling = "flex flex-col items-center h-full w-44";
+
+const variantClasses = {
+  "primary": "text-[var(--greendark)]",
+  "secondary": "text-[var(--orange)]"
+};
+
+
+const sizeClasses = {
+  "large": "text-4xl",
+  "medium": "text-2xl",
+  "small": "text-xs"
+};
+---
+<article class:list={[cardBaseStyling, sizeClasses[size]]}>
+  <img class="mb-6" src={svg} alt="">
+  <p class:list={[variantClasses[variant]]}><slot /></p>
+</article>
