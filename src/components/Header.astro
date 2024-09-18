@@ -15,11 +15,13 @@ import Button from "./Button.astro";
       <!-- Desktop navigation -->
       <nav id="desktopmenu" class="hidden lg:flex flex-row items-center gap-12 text-l pt-4 text-[var(--offwhite)]">
         <ul class="flex flex-row items-center gap-12">
-          <li><Link href="#hvad_er">OM DCD</Link></li>
-          <li><Link href="#hvorfor">HVORFOR</Link></li>
-          <li><Link href="#hvordan">HVORDAN</Link></li>
-          <li><Link href="#facts">VIDSTE DU?</Link></li>
-          <li><Button variant="primary" size="small" class="!py-1">DELTAG</Button></li>
+          <li><a href="#hvad_er">OM DCD</a></li>
+          <li><a href="#hvorfor">HVORFOR</a></li>
+          <li><a href="#hvordan">HVORDAN</a></li>
+          <li><a href="#facts">VIDSTE DU?</a></li>
+          <li>
+            <Button variant="primary" size="small" href="/registrer">DELTAG</Button>
+          </li>
         </ul>
       </nav>
 
@@ -39,7 +41,7 @@ import Button from "./Button.astro";
         <li class="text-center py-4 border-b-2 border-[var(--offwhite)] text-[var(--offwhite)]"><Link href="#hvorfor">HVORFOR</Link></li>
         <li class="text-center py-4 border-b-2 border-[var(--offwhite)] text-[var(--offwhite)]"><Link href="#hvordan">HVORDAN</Link></li>
         <li class="text-center py-4 border-b-2 border-[var(--offwhite)] text-[var(--offwhite)]"><Link href="#facts">VIDSTE DU?</Link></li>
-        <li class="text-center py-4 text-[var(--offwhite)]"><Button variant="primary" size="small">DELTAG</Button></li>
+        <li class="text-center py-8 text-[var(--offwhite)]"><Button variant="primary" size="small" href="/registrer">DELTAG</Button></li>
       </ul>
     </nav>
   </div>
