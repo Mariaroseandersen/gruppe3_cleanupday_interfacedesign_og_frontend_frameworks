@@ -10,7 +10,7 @@ import Button from "./Button.astro";
       <!-- Background color for left half (greendark) -->
       <div class="absolute top-0 left-0 w-1/2 h-full" style="background-color: var(--greendark); z-index: 0;"></div>
       <!-- Background color for right half (offwhite) -->
-      <div class="absolute top-0 right-0 w-1/2 h-full" style="background-color: var(--offwhite); z-index: 0;"></div>
+      <div class="absolute top-0 right-0 w-1/2 h-full" :style="{ backgroundColor: isIndexPage ? 'var(--offwhite)' : 'var(--darkgreen)', zIndex: 0 }"></div>
       <!-- Navbar (logo and burger button) -->
       <div id="navbar" class="relative flex flex-row justify-between items-center px-4 py-2 lg:px-8 lg:py-4">
         <!-- Logo -->
@@ -18,7 +18,7 @@ import Button from "./Button.astro";
           <a href="/">DIGITAL <br />CLEANUP <br />DAY</a>
         </div>
         <!-- Desktop navigation -->
-        <nav id="desktopmenu" class="hidden lg:flex flex-row items-center gap-12 text-l pt-4 text-[var(--greendark)] relative z-10">
+        <nav id="desktopmenu" class="hidden lg:flex flex-row items-center gap-12 text-l pt-4 relative z-10" :class="{'text-[var(--greendark)]': isIndexPage, 'text-[var(--offwhite)]': !isIndexPage}">
           <ul class="flex flex-row items-center gap-12">
             <li><a href="/#hvad_er">OM DCD</a></li>
             <li><a href="/#hvorfor">HVORFOR</a></li>
@@ -26,9 +26,11 @@ import Button from "./Button.astro";
             <li><a href="/#facts">VIDSTE DU?</a></li>
             <li>
               <Button variant="outlined" size="small" href="/registrer">DELTAG</Button>
+              <!-- Her skal der ændres således at varianten er dynamisk, hvis IsIndexPage er true, dvs. vi er på forsiden skal variant være outlined. Hvis IsIndexPage er false, dvs. vi er ikke på forsiden så skal variant være primary -->
             </li>
           </ul>
         </nav>
+
         <!-- Burger menu button for mobile -->
         <button id="burgermenu" class="lg:hidden flex flex-col justify-center items-center w-8 h-8 z-50 bg-[var(--greendark)]" x-on:click="showmenu = !showmenu">
           <!-- Show burger lines if menu is closed -->
